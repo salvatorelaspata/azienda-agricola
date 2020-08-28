@@ -1,0 +1,43 @@
+<form name="contact" method="POST" data-netlify="true">
+   <p>
+      <label>Your Name: <input type="text" name="name" /></label>
+   </p>
+   <p>
+      <label>Your Email: <input type="email" name="email" /></label>
+   </p>
+   <p>
+      <label
+         >Your Role:
+         <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+         </select></label
+      >
+   </p>
+   <p>
+      <label>Message: <textarea name="message"></textarea></label>
+   </p>
+   <p>
+      <button type="submit">Send</button>
+   </p>
+</form>
+
+<div id="map"></div>
+
+<footer class="site-footer">
+   <div class="inner">
+      {{ with .Site.Params.copyright }}
+      <section class="copyright">{{ . | markdownify }}</section>
+      {{ end }}
+      <section>{{ echoParam .Site.Params "hidebyline" }}</section>
+      {{ if ne .Site.Params.hidedesignbyline true }}
+      <section>
+         <!-- TODO: Change link to https://themes.gohugo.io/hugo-scroll/ once
+            https://github.com/gohugoio/hugoThemes/issues/881 is solved. -->
+         <a href="https://github.com/janraasch/hugo-scroll/">Design</a> template
+         built with ♥️ by
+         <a href="https://www.janraasch.com" title="Jan Raasch">Jan Raasch</a>
+      </section>
+      {{ end }}
+   </div>
+</footer>

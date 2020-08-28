@@ -28,6 +28,7 @@ title = "Azienda Agricola Vitale"
     # https://gohugo.io/templates/internal#open-graph.
     images = ["images/cover-image.jpg"]
 
+
     # Another "title" :-). This one is used as the site_name on the Hugo's internal
     # opengraph structured data template.
     # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
